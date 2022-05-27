@@ -1,0 +1,30 @@
+// INSTALAR CASSANDRA PARA WINDOWS
+https://cassandra.apache.org/_/download.html
+
+https://cassandra.apache.org/doc/latest/cassandra/getting_started/installing.html (PREREQUISITOS)
+
+https://www.youtube.com/watch?v=hJxlkHafYsQ (Gringo que envia enlaces)
+
+
+// PREREQUISITOS DE CASSANDRA
+https://cassandra.apache.org/doc/latest/cassandra/getting_started/installing.html
+
+
+// DESCARGAR EL JDK 8
+https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+
+//IMPORTAR UN CSV EN CASSANDRA
+https://www.youtube.com/watch?v=N71NwCKfyQ4&t=325s 
+
+// CREAR UN KEYSPACE
+https://www.youtube.com/watch?v=91ZwkO07xHU 
+
+//THRIFF PROBLEM EN CASSANDRA (CONNECT CASSANDRA USING THRIFF)
+
+https://user.cassandra.apache.narkive.com/BK7h52b0/unable-connect-thrift-client-to-cassandra-remotely-connection-refused
+
+https://stackoverflow.com/questions/38918292/org-apache-thrift-transport-ttransportexception-read-a-negative-frame-size-20
+
+https://stackoverflow.com/questions/31620494/enable-thrift-in-cassandra-docker (ENABLE THRIF IN CASSANDRA DOCKER)
+
+https://issues.apache.org/jira/browse/CASSANDRA-9319 (dONT START THRIFT rpc SERVER BY DEFAULT)

@@ -1,0 +1,27 @@
+// NOMBRE DEL USUARIO 
+sa (significa super admministrador)
+
+// PASSWORD
+9838k_Holalelo_cabrelo
+
+//INSTANCE ID
+
+MSSQLSERVER
+
+// SERVER NAME
+DESKTOP-5I9GGJT
+
+
+//CARGAR UN CSV 
+
+BULK INSERT datos_uno from 'C:\Program Files (x86)\PostgreSQL\Npgsql\BASE_REFERENCIA_EXCEL.csv' WITH (FORMAT = 'CSV', FIRSTROW=2, FIELDTERMINATOR = ',', ROWTERMINATOR='\n' )
+
+BULK INSERT datos_uno from 'C:\Users\Expert Pro\Desktop\base_datos_tesis\BASE_REFERENCIA_EXCEL.csv' WITH (FORMAT = 'CSV', FIRSTROW=2, FIELDTERMINATOR = ',', ROWTERMINATOR='\n' )
+
+// CREAR UNA TABLA
+
+CREATE TABLE datos_uno (
+nombre varchar (500), 
+valor int,  
+valor_comun int
+);

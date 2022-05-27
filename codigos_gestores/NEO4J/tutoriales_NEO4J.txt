@@ -1,0 +1,17 @@
+// INTRODUCIR UN CSV EN NEO4J
+https://neo4j.com/videos/importing-csv-data-into-neo4j-aura-free-tier/ 
+
+---me gusta mucho esta
+https://programmerclick.com/article/78741965175/
+
+//SOLUCIONAR EL ASUNTO DE INSTALACION DE NEO4J POR CUESTION DE SOFTWARE
+
+https://stackoverflow.com/questions/15795020/unable-to-get-neo4j-to-run 
+
+// OPERADORES POSIBLES DE SELECCION CON NEO4J
+
+https://neo4j.com/docs/cypher-manual/current/clauses/where/ 
+
+// ACADEMIA EN CHYPER
+
+https://graphacademy.neo4j.com/courses/cypher-fundamentals/1-reading/1-intro-cypher/ 

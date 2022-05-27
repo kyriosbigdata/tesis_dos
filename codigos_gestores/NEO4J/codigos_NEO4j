@@ -1,0 +1,22 @@
+
+//SUBIR UN CSV (ARCHIVO DEBE ESTAR EN LA CARPETA IMPORT)
+
+LOAD CSV WITH HEADERS FROM 'file:///BASE_REFERENCIAL_EXCEL.csv' AS ROW RETURN ROW LIMIT 5
+ 
+LOAD CSV WITH HEADERS FROM 'file:///BASE_REFERENCIAL_EXCEL.csv' AS line 
+MERGE (n:MyNode {Name:line.nombre})
+MERGE(m:MyNode{Name:line.valor})
+MERGE (n) :[-TO {dist:line.valor_comun}]-> (m)
+
+---- otra forma
+
+    LOAD CSV WITH HEADERS  FROM "file:///BASE_REFERENCIAL_EXCEL.csv" AS line  
+    MERGE (p:test{id:line.id,name:line.name,description:line.description,Alias:line.Alias})
+
+
+C:/neo4j-enterprise-4.4.7/import
+
+
+//INGRESO EN EL BRONWER
+Localhost:7474
+

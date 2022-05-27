@@ -1,0 +1,9 @@
+// subir código en git remoto
+
+git remote add origin https://github.com/kyriosbigdata/base_datos_tesis.git 
+git branch -M main
+git push -u origin main
+
+
+// descargar clonacion
+git clone https://github.com/kyriosbigdata/base_datos_tesis.git

@@ -1,0 +1,50 @@
+// MYSQL
+
+	// INGRESO DESDE CONSOLA
+	mysql -u root -p
+
+	9838k_Holalelo_cabrelo
+
+
+// CREACIÒN DE TABLA DESDE CONSOLA
+CREATE TABLE datos (
+nombre varchar (500), 
+valor int,  
+valor_comun int
+);
+
+// CARGAR LOS VALORES DE LA TABLA (el backslash es con ALT + 92)
+load data infile 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\BASE_REFERENCIAL_EXCEL.csv'
+into table datos_cuatro
+fields terminated by ','
+lines terminated by '\r\n';
+
+//CARPETA PÚBLICA PARA SUBIR MYSQL
+
+C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\BASE_REFERENCIAL_EXCEL.csv
+
+// DECRIBIR LAS CARACTERÍSITCAS DE LA TABLA
+
+describe alumnos;
+
+// VER TODA LA INFORMACION DE LA TABLA
+
+select* from nombre_tabla
+
+// ELIMINAR TODOS LOS REGISTROS DE UNA TABLA
+truncate nombre_tabla;
+
+// BORRAR UNA TABLA
+drop table nombre_tabla;
+
+// SUMA
+SELECT SUM(valor) as total from datos;
+
+// ALTERAR UNA TABLA O MODIFICAR
+alter table nombre_tabla modify nombre_campo varchar (500) ;
+
+//BORRAR UNA BASE DE DATOS
+drop database nombre_base;
+
+//SELECCIONAR VALOR DE LA TABLA
+select * from datos where valor > 350 limit 100 ;

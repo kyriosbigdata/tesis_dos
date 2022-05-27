@@ -1,0 +1,1 @@
+Debido a la escritura y lectura del lenguaje la carga aumenta cuando se trata de mayor cantidad de información con tendencias a big data.

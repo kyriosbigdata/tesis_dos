@@ -1,0 +1,26 @@
+// PASSWORD
+
+9838k_Holalelo_cabrelo_02
+
+// SERVICE NAME
+
+MariaDB
+
+// PORT
+2020
+
+// CREACIÒN DE TABLA DESDE CONSOLA
+CREATE TABLE datos (
+nombre varchar (500), 
+valor int,  
+valor_comun int
+);
+
+
+// OPERACION SUMA 
+
+SELECT SUM(valor) as total from datos;
+
+// OPERACION SELECCION
+
+select * from datos where valor > 350 limit 100 ;

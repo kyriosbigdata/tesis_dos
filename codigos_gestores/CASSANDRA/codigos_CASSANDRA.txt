@@ -1,0 +1,15 @@
+// INGRESAR A LA BASE DESDE LA TERMINAL
+cqlsh
+
+// INSTALAR EL REGISTRO DE USUARIO DESDE TERMINAL
+pip install pyreadline (hacerlo desde le bin)
+
+//INGRESO A LA BASE DE DATOS
+python -m pip install --upgrade pip
+
+// ABRIR EL KEYSPACES
+ CREATE A KEYSPACE
+ create keyspace personas with replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} AND durable_writes = 'ture'; 
+
+ //TEST CLUSTER
+    127.0.0.1: 9042

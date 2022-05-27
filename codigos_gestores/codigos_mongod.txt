@@ -1,0 +1,39 @@
+// CREAR UNA COLLECTION
+
+db.createCollection ('datos')
+
+// CONSULTA AGREGACION O SELECCION (https://www.youtube.com/watch?v=DH0ycfjCJSg)
+
+db.datos.aggregate(
+[
+
+{$match: {valor:1}}
+
+]
+)
+
+// CONSULTA DE SUMA (https://www.youtube.com/watch?v=HkDNWiSUQCA)
+
+db.datos_uno.aggregate(
+[
+
+{$match:{valor_comun:1}},
+{$group: {_id:"$valor_comun", total:{$sum:"$valor"}}}
+
+]
+)
+
+// CONSULTA DE SUMA DOS (https://www.youtube.com/watch?v=HkDNWiSUQCA)
+
+db.datos_uno.aggregate([{$match:{valor_comun:1}},{$group: {_id:"$valor_comun", total:{$sum:"$valor"}}}]).limit(100)
+
+//CONSULTA DE UNA VALOR MAYOR QUE
+
+db.datos_uno.find( { valor: { $gt: 350 } } ).limit(100)
+
+
+//BORRAR UNA COLECCION 
+db.nombre_coleccion.drop()
+
+// BORRAR UNA BASE DE DATOS
+db.dropDatabase()
