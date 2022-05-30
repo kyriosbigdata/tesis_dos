@@ -11,10 +11,20 @@ MERGE (n) :[-TO {dist:line.valor_comun}]-> (m)
 ---- otra forma
 
     LOAD CSV WITH HEADERS  FROM "file:///BASE_REFERENCIAL_EXCEL.csv" AS line  
-    MERGE (p:test{id:line.id,name:line.name,description:line.description,Alias:line.Alias})
-
+    MERGE (p:personas{nombre:line.nombre,valor:line.valor,valor_comun:line.valor_comun}) AS row RETURN LIMIT 5
 
 C:/neo4j-enterprise-4.4.7/import
+
+
+-- otra forma de subir el csv
+LOAD CSV WITH HEADERS FROM'file:///BASE_REFERENCIAL_EXCEL.csv' AS row 
+CREATE (p:personas)
+SET p.nombre = row.nombre, p.valor = row.valor, p.valor_comun = row.valorcomun
+
+-- subida con cambio de string a numero
+LOAD CSV WITH HEADERS FROM'file:///BASE_REFERENCIAL_EXCEL.csv' AS row 
+CREATE (p3:personas_tres)
+SET p3.nombre = row.nombre, p3.valor = toInteger(row.valor), p3.valor_comun = toInteger(row.valor_comun)
 
 
 //INGRESO EN EL BRONWER
@@ -23,3 +33,12 @@ Localhost:7474
 
 //VER LAS PROPIEDADES DE LA BASE O NODO
 CALL db.propertyKeys() 
+
+// CREAR UN NODO INGRESANDO UNA PROPIEDAD VALOR
+merge (p:personas_no{name:'Lorenzo'})
+
+//REALIZAR UNA SELECCIÓN
+
+MATCH (p:personas)
+RETURN p
+
