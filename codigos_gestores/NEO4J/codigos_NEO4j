@@ -20,3 +20,6 @@ C:/neo4j-enterprise-4.4.7/import
 //INGRESO EN EL BRONWER
 Localhost:7474
 
+
+//VER LAS PROPIEDADES DE LA BASE O NODO
+CALL db.propertyKeys() 
