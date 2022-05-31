@@ -42,3 +42,12 @@ merge (p:personas_no{name:'Lorenzo'})
 MATCH (p:personas)
 RETURN p
 
+// REALIZAR UNA SELECCION DE MAYOR QUE
+
+MATCH (p3:personas_tres)
+WHERE p3.valor>350
+RETURN p3.valor LIMIT 100
+
+// REALIZAR UNA SUMA
+MATCH (p3:personas)
+RETURN SUM(p3.valores)
