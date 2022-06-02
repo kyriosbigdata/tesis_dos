@@ -7,9 +7,22 @@ pip install pyreadline (hacerlo desde le bin)
 //INGRESO A LA BASE DE DATOS
 python -m pip install --upgrade pip
 
+// DESCRIBIR UN KEYSPACE
+DESCRIBE KEYSPACE 
+
 // ABRIR EL KEYSPACES
- CREATE A KEYSPACE
- create keyspace personas with replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} AND durable_writes = 'ture'; 
+ CREATE KEYSPACE personas with replication = {'class': 'SimpleStrategy', 'replication_factor': '1'} AND durable_writes = 'ture'; 
+
+// DESCRIBIR UN KEYSPACE
+DESCRIBE KEYSPACE 
 
  //TEST CLUSTER
     127.0.0.1: 9042
+
+ // IMPORTAR UNA CSV (crear tres campos que permitan relacionarse con las consultas seleccionadas)
+ CREATE TABLE datos_cuatro (nombre text, valor int, valor_comun int, PRIMARY KEY (nombre, valor) ); 
+
+-- paso dos
+
+COPY datos_cuatro (nombre,valor,valor_comun) FROM 'C:\Users\kyrio\OneDrive\Escritorio\tesis_dos\BASE_REFERENCIAL_EXCEL.csv' WITH DELIMITER=','
+AND HEADER = TRUE;
