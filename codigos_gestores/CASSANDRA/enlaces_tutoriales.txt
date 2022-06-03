@@ -28,3 +28,7 @@ https://stackoverflow.com/questions/38918292/org-apache-thrift-transport-ttransp
 https://stackoverflow.com/questions/31620494/enable-thrift-in-cassandra-docker (ENABLE THRIF IN CASSANDRA DOCKER)
 
 https://issues.apache.org/jira/browse/CASSANDRA-9319 (dONT START THRIFT rpc SERVER BY DEFAULT)
+
+
+// SELECT EN CASSANDRA
+https://docs.datastax.com/en/cql-oss/3.3/cql/cql_reference/cqlSelect.html 

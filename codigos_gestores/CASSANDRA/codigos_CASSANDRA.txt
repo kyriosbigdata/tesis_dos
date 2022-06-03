@@ -26,3 +26,22 @@ DESCRIBE KEYSPACE
 
 COPY datos_cuatro (nombre,valor,valor_comun) FROM 'C:\Users\kyrio\OneDrive\Escritorio\tesis_dos\BASE_REFERENCIAL_EXCEL.csv' WITH DELIMITER=','
 AND HEADER = TRUE;
+
+
+// VER LAS TABLAS Y DESCRIBIT
+DESCRIBE TABLES;
+
+DESCRIBE TABLE nombre_tabla;
+
+
+// SELECCIONAR DETERMINADAS FILLA
+
+  --Opcion 1
+  SELECT * | select_expression | DISTINCT partition 
+FROM [keyspace_name.] table_name 
+[WHERE partition_value
+   [AND clustering_filters 
+   [AND static_filters]]] 
+[ORDER BY PK_column_name ASC|DESC] 
+[LIMIT N]
+[ALLOW FILTERING]
