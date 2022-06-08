@@ -19,13 +19,15 @@ DESCRIBE KEYSPACE
  //TEST CLUSTER
     127.0.0.1: 9042
 
- // IMPORTAR UNA CSV (crear tres campos que permitan relacionarse con las consultas seleccionadas)
- CREATE TABLE datos_cuatro (nombre text, valor int, valor_comun int, PRIMARY KEY (nombre, valor) ); 
+ // IMPORTAR UNA CSV (crear tres campos que permitan relacionarse con las consultas seleccionadas) (los primary key iniciales
+ indican la particion que se usará)
+
+ CREATE TABLE datos_once (nombre text, valor int, valor_comun int, PRIMARY KEY (valor_comun, valor, nombre) ); 
 
 -- paso dos
 
-COPY datos_cuatro (nombre,valor,valor_comun) FROM 'C:\Users\kyrio\OneDrive\Escritorio\tesis_dos\BASE_REFERENCIAL_EXCEL.csv' WITH DELIMITER=','
-AND HEADER = TRUE;
+COPY datos_nueve (nombre,valor,valor_comun) from 'C:\Users\kyrio\OneDrive\Escritorio\tesis_dos\BASE_REFERENCIAL_EXCEL.CSV' WITH HEADER='TRUE';
+
 
 
 // VER LAS TABLAS Y DESCRIBIT
@@ -45,3 +47,12 @@ FROM [keyspace_name.] table_name
 [ORDER BY PK_column_name ASC|DESC] 
 [LIMIT N]
 [ALLOW FILTERING]
+
+--otra forma de seleccionar todo
+SELECT * FROM nombre_tabla;
+SELECT * FROM datos_nueve WHERE valor>350 limit 100 allow filtering;
+
+// SUMAR
+
+ SELECT sum(valor) FROM datos_ocho;
+ SELECT sum(valor) FROM datos_nueve WHERE valor>350 ALLOW FILTERING;

@@ -7,3 +7,10 @@ git push -u origin main
 
 // descargar clonacion
 git clone https://github.com/kyriosbigdata/base_datos_tesis.git
+
+//CONECTAR REMOTANMENTE
+git remote (incompleto)
+
+
+// token
+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
